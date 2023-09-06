@@ -1,0 +1,3542 @@
+/* =============
+    Mixins
+============= */
+/* ---------------- Font Sizing ---------------- */
+html {
+  font-size: 100%;
+}
+
+/* ---------------- Media Queries ---------------- */
+/* =============
+    Variables
+============= */
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --font-noto-sans: "Noto Sans";
+  --font-noto-sans-sc: "Noto Sans SC";
+  --font-inter: Inter;
+  --font-inherit: inherit;
+  /* font sizes */
+  --font-size-17xl: 36px;
+  --font-size-5xl: 24px;
+  --font-size-21xl: 40px;
+  --font-size-29xl: 48px;
+  --font-size-45xl: 64px;
+  /* Colors */
+  --color-white: #fff;
+  --color-teal: #00738c;
+  --color-skyblue: #77bfcf;
+  --color-black: #000;
+  --color-darkorange: #ff902e;
+  --color-gainsboro: #d9d9d9;
+  /* Paddings */
+  --padding-29xl: 48px;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* =============
+    Base
+============= */
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+.footer {
+  position: absolute;
+  top: 1202px;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 629px;
+}
+
+.logo-3-icon,
+.logo-4-icon {
+  position: absolute;
+  top: 1414px;
+  left: 1276px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-4-icon {
+  top: 1421px;
+  left: 1252px;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.get-to-know {
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.blank-line {
+  margin: 0;
+}
+
+.get-to-know-container {
+  top: 1298px;
+  left: 60px;
+}
+
+.contact-infotitiansorg-800-3-container,
+.get-to-know-container,
+.need-help-your-container {
+  position: absolute;
+  font-size: var(--font-size-17xl);
+  text-align: center;
+}
+
+.need-help-your-container {
+  top: 1284px;
+  left: 429px;
+  display: inline-block;
+  width: 420px;
+  height: 356px;
+}
+
+.contact-infotitiansorg-800-3-container {
+  top: 1287px;
+  left: 892px;
+}
+
+.settings-child,
+.settings-item {
+  position: absolute;
+  top: 1666px;
+  left: 0;
+  width: 1440px;
+  height: 11px;
+}
+
+.settings-item {
+  top: 1677px;
+  background-color: var(--color-darkorange);
+  height: 154px;
+}
+
+.line-icon,
+.settings-inner {
+  position: absolute;
+  top: 1322px;
+  left: 420px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.line-icon {
+  top: 1341px;
+  left: 845px;
+}
+
+.settings-child1,
+.settings-child2 {
+  position: absolute;
+  top: 233px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.settings-child2 {
+  top: 1197px;
+}
+
+.your-account1 {
+  position: absolute;
+  top: 287px;
+  left: 62px;
+  font-weight: 600;
+}
+
+.addressesbox,
+.coustomer-service-box,
+.profile-box,
+.rectangle-div,
+.your-account-box,
+.your-list-box {
+  position: absolute;
+  top: 396px;
+  left: 101px;
+  background-color: var(--color-darkorange);
+  width: 484px;
+  height: 192px;
+}
+
+.addressesbox,
+.coustomer-service-box,
+.profile-box,
+.rectangle-div,
+.your-list-box {
+  top: 664px;
+}
+
+.addressesbox,
+.coustomer-service-box,
+.profile-box,
+.your-list-box {
+  top: 952px;
+}
+
+.addressesbox,
+.coustomer-service-box,
+.profile-box {
+  left: 773px;
+}
+
+.addressesbox,
+.profile-box {
+  top: 664px;
+  left: 781px;
+}
+
+.addressesbox {
+  top: 396px;
+}
+
+.adresses,
+.login-security {
+  position: absolute;
+  top: 422px;
+  left: 945px;
+  font-weight: 600;
+}
+
+.login-security {
+  top: 684px;
+  left: 195px;
+}
+
+.coustomer-service,
+.profile,
+.your-account2,
+.your-list {
+  position: absolute;
+  top: 976px;
+  left: 248px;
+  font-weight: 600;
+}
+
+.coustomer-service,
+.profile,
+.your-account2 {
+  left: 854px;
+}
+
+.profile,
+.your-account2 {
+  top: 684px;
+  left: 958px;
+}
+
+.your-account2 {
+  top: 422px;
+  left: 205px;
+}
+
+.edit-remove-or,
+.manage-add-or,
+.track-return-cancel {
+  position: absolute;
+  top: 760px;
+  left: 810px;
+  font-size: var(--font-size-5xl);
+  font-weight: 600;
+}
+
+.edit-remove-or,
+.track-return-cancel {
+  top: 492px;
+  left: 824px;
+}
+
+.track-return-cancel {
+  left: 138px;
+  display: inline-block;
+  width: 403px;
+}
+
+.edit-login-name,
+.self-service-options,
+.view-modify-share {
+  position: absolute;
+  top: 760px;
+  left: 119px;
+  font-size: var(--font-size-5xl);
+  font-weight: 600;
+}
+
+.self-service-options,
+.view-modify-share {
+  top: 1039px;
+  left: 122px;
+}
+
+.self-service-options {
+  top: 1046px;
+  left: 832px;
+}
+
+.conditions-of-useprivacy {
+  text-decoration: underline;
+}
+
+.conditions-of-useprivacy-notic1 {
+  margin-bottom: 0;
+}
+
+.conditions-of-useprivacy-notic {
+  margin: 0;
+  padding-left: var(--padding-29xl);
+}
+
+.conditions-of-useprivacy-container {
+  position: absolute;
+  top: 1710px;
+  left: 178px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  text-align: center;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 238px;
+}
+
+.serch-box-1,
+.serch-box-2 {
+  position: absolute;
+  top: 59px;
+  left: 576px;
+  background-color: var(--color-white);
+  width: 532px;
+  height: 84px;
+}
+
+.serch-box-2 {
+  top: 57px;
+  left: 370px;
+  background-color: var(--color-teal);
+  width: 206px;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 49px;
+  left: 179px;
+  width: 66px;
+  height: 48px;
+}
+
+.shoping-chart-icon {
+  position: absolute;
+  top: 52px;
+  left: 1233px;
+  width: 106.58px;
+  height: 78.41px;
+  cursor: pointer;
+}
+
+.search {
+  position: absolute;
+  top: 75px;
+  left: 414px;
+}
+
+.logo-1-icon,
+.logo-2-icon {
+  position: absolute;
+  top: 0;
+  left: 12.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-1-icon {
+  top: 10.49px;
+  left: 0;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.banner-parent,
+.serch-box-1-parent {
+  position: absolute;
+  top: 42px;
+  left: 25px;
+  width: 1339.58px;
+  height: 166.85px;
+}
+
+.banner-parent {
+  top: -3px;
+  left: 0;
+  width: 1440px;
+  height: 238px;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans-sc);
+}
+
+.settings {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1831px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-black);
+  font-family: var(--font-noto-sans);
+}
+
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+.footer1 {
+  position: absolute;
+  top: 1778px;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 598px;
+}
+
+.logo-3-icon1,
+.logo-4-icon1 {
+  position: absolute;
+  top: 1955px;
+  left: 1245.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-4-icon1 {
+  top: 1965.49px;
+  left: 1233px;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.get-to-know1 {
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.blank-line3 {
+  margin: 0;
+}
+
+.get-to-know-container1,
+.need-help-your-container1 {
+  position: absolute;
+  top: 1824px;
+  left: 88px;
+  text-align: center;
+}
+
+.need-help-your-container1 {
+  top: 1822px;
+  left: 425px;
+  display: inline-block;
+  width: 420px;
+  height: 356px;
+}
+
+.contact-infotitiansorg-800-3-container1 {
+  position: absolute;
+  top: 1836px;
+  left: 902px;
+  text-align: center;
+}
+
+.cart-child,
+.cart-item {
+  position: absolute;
+  top: 2215px;
+  left: 0;
+  width: 1436px;
+  height: 11px;
+}
+
+.cart-item {
+  top: 2222px;
+  left: -4px;
+  background-color: var(--color-darkorange);
+  width: 1440px;
+  height: 154px;
+}
+
+.cart-child1,
+.cart-inner {
+  position: absolute;
+  top: 1885px;
+  left: 420px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.cart-child1 {
+  top: 1896px;
+  left: 841px;
+}
+
+.cart-child2,
+.cart-child3 {
+  position: absolute;
+  top: 233px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.cart-child3 {
+  top: 1778px;
+  width: 1436px;
+}
+
+.you-might-be,
+.your-titans-cart {
+  position: absolute;
+  top: 310px;
+  left: 130px;
+  font-size: var(--font-size-29xl);
+  font-weight: 600;
+}
+
+.you-might-be {
+  top: 922px;
+  left: 142px;
+}
+
+.whats-fresh-icon {
+  position: absolute;
+  top: 460px;
+  left: 116px;
+  width: 1200px;
+  height: 391px;
+}
+
+.whats-fresh-icon1 {
+  position: absolute;
+  top: 1028px;
+  left: 88px;
+  width: 1236px;
+  height: 556px;
+}
+
+.boys-cool-in,
+.fisher-price-retro-chatter,
+.girls-distressed-denim {
+  position: absolute;
+  top: 1426px;
+  left: 142px;
+  display: inline-block;
+  width: 387px;
+}
+
+.boys-cool-in,
+.girls-distressed-denim {
+  top: 1408px;
+  left: 529px;
+  width: 340px;
+}
+
+.girls-distressed-denim {
+  top: 1426px;
+  left: 912px;
+  width: 426px;
+}
+
+.cart-child4,
+.cart-child5,
+.cart-child6 {
+  position: absolute;
+  top: 1073px;
+  left: 142px;
+  background-color: var(--color-gainsboro);
+  width: 330px;
+  height: 320px;
+}
+
+.cart-child5,
+.cart-child6 {
+  left: 539px;
+  background-color: var(--color-white);
+}
+
+.cart-child6 {
+  left: 935px;
+  background-color: var(--color-gainsboro);
+}
+
+.cart-child7 {
+  position: absolute;
+  top: 544.5px;
+  left: 195.5px;
+  border-top: 5px solid #8c4506;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1054px;
+  height: 5px;
+}
+
+.cart-child8 {
+  position: absolute;
+  top: 726px;
+  left: 197.96px;
+  width: 1049.04px;
+  height: 13px;
+}
+
+.subtotal-000 {
+  position: absolute;
+  top: 769px;
+  left: 994px;
+  font-size: var(--font-size-21xl);
+  font-weight: 600;
+}
+
+.image-19-icon,
+.image-20-icon,
+.image-26-icon {
+  position: absolute;
+  top: 1066px;
+  left: 931px;
+  width: 334px;
+  height: 347px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-19-icon,
+.image-20-icon {
+  top: 1073px;
+  left: 539px;
+  width: 330px;
+  height: 320px;
+}
+
+.image-19-icon {
+  top: 1066px;
+  left: 147px;
+  height: 324px;
+}
+
+.conditions-of-useprivacy1 {
+  text-decoration: underline;
+}
+
+.conditions-of-useprivacy-notic3 {
+  margin-bottom: 0;
+}
+
+.conditions-of-useprivacy-notic2 {
+  margin: 0;
+  padding-left: var(--padding-29xl);
+}
+
+.conditions-of-useprivacy-container1 {
+  position: absolute;
+  top: 2244px;
+  left: 205px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  text-align: center;
+}
+
+.banner1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 238px;
+}
+
+.serch-box-11,
+.serch-box-21 {
+  position: absolute;
+  top: 59px;
+  left: 576px;
+  background-color: var(--color-white);
+  width: 532px;
+  height: 84px;
+}
+
+.serch-box-21 {
+  top: 57px;
+  left: 370px;
+  background-color: var(--color-teal);
+  width: 206px;
+}
+
+.menu-icon1 {
+  position: absolute;
+  top: 49px;
+  left: 179px;
+  width: 66px;
+  height: 48px;
+}
+
+.shoping-chart-icon1 {
+  position: absolute;
+  top: 52px;
+  left: 1233px;
+  width: 106.58px;
+  height: 78.41px;
+}
+
+.search1 {
+  position: absolute;
+  top: 75px;
+  left: 414px;
+}
+
+.logo-1-icon1,
+.logo-2-icon1 {
+  position: absolute;
+  top: 0;
+  left: 12.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-1-icon1 {
+  top: 10.49px;
+  left: 0;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.banner-group,
+.serch-box-1-group {
+  position: absolute;
+  top: 42px;
+  left: 25px;
+  width: 1339.58px;
+  height: 166.85px;
+}
+
+.banner-group {
+  top: -3px;
+  left: 0;
+  width: 1440px;
+  height: 238px;
+  color: var(--color-white);
+  font-family: var(--font-noto-sans-sc);
+}
+
+.cart {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 2376px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-noto-sans);
+}
+
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+.footer1 {
+  position: absolute;
+  top: 1778px;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 598px;
+}
+
+.logo-3-icon1,
+.logo-4-icon1 {
+  position: absolute;
+  top: 1955px;
+  left: 1245.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-4-icon1 {
+  top: 1965.49px;
+  left: 1233px;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.get-to-know1 {
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.blank-line3 {
+  margin: 0;
+}
+
+.get-to-know-container1,
+.need-help-your-container1 {
+  position: absolute;
+  top: 1824px;
+  left: 88px;
+  text-align: center;
+}
+
+.need-help-your-container1 {
+  top: 1822px;
+  left: 425px;
+  display: inline-block;
+  width: 420px;
+  height: 356px;
+}
+
+.contact-infotitiansorg-800-3-container1 {
+  position: absolute;
+  top: 1836px;
+  left: 902px;
+  text-align: center;
+}
+
+.cart-child,
+.cart-item {
+  position: absolute;
+  top: 2215px;
+  left: 0;
+  width: 1436px;
+  height: 11px;
+}
+
+.cart-item {
+  top: 2222px;
+  left: -4px;
+  background-color: var(--color-darkorange);
+  width: 1440px;
+  height: 154px;
+}
+
+.cart-child1,
+.cart-inner {
+  position: absolute;
+  top: 1885px;
+  left: 420px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.cart-child1 {
+  top: 1896px;
+  left: 841px;
+}
+
+.cart-child2,
+.cart-child3 {
+  position: absolute;
+  top: 233px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.cart-child3 {
+  top: 1778px;
+  width: 1436px;
+}
+
+.you-might-be,
+.your-titans-cart {
+  position: absolute;
+  top: 310px;
+  left: 130px;
+  font-size: var(--font-size-29xl);
+  font-weight: 600;
+}
+
+.you-might-be {
+  top: 922px;
+  left: 142px;
+}
+
+.whats-fresh-icon {
+  position: absolute;
+  top: 460px;
+  left: 116px;
+  width: 1200px;
+  height: 391px;
+}
+
+.whats-fresh-icon1 {
+  position: absolute;
+  top: 1028px;
+  left: 88px;
+  width: 1236px;
+  height: 556px;
+}
+
+.boys-cool-in,
+.fisher-price-retro-chatter,
+.girls-distressed-denim {
+  position: absolute;
+  top: 1426px;
+  left: 142px;
+  display: inline-block;
+  width: 387px;
+}
+
+.boys-cool-in,
+.girls-distressed-denim {
+  top: 1408px;
+  left: 529px;
+  width: 340px;
+}
+
+.girls-distressed-denim {
+  top: 1426px;
+  left: 912px;
+  width: 426px;
+}
+
+.cart-child4,
+.cart-child5,
+.cart-child6 {
+  position: absolute;
+  top: 1073px;
+  left: 142px;
+  background-color: var(--color-gainsboro);
+  width: 330px;
+  height: 320px;
+}
+
+.cart-child5,
+.cart-child6 {
+  left: 539px;
+  background-color: var(--color-white);
+}
+
+.cart-child6 {
+  left: 935px;
+  background-color: var(--color-gainsboro);
+}
+
+.cart-child7 {
+  position: absolute;
+  top: 544.5px;
+  left: 195.5px;
+  border-top: 5px solid #8c4506;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1054px;
+  height: 5px;
+}
+
+.cart-child8 {
+  position: absolute;
+  top: 726px;
+  left: 197.96px;
+  width: 1049.04px;
+  height: 13px;
+}
+
+.subtotal-000 {
+  position: absolute;
+  top: 769px;
+  left: 994px;
+  font-size: var(--font-size-21xl);
+  font-weight: 600;
+}
+
+.image-19-icon,
+.image-20-icon,
+.image-26-icon {
+  position: absolute;
+  top: 1066px;
+  left: 931px;
+  width: 334px;
+  height: 347px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-19-icon,
+.image-20-icon {
+  top: 1073px;
+  left: 539px;
+  width: 330px;
+  height: 320px;
+}
+
+.image-19-icon {
+  top: 1066px;
+  left: 147px;
+  height: 324px;
+}
+
+.conditions-of-useprivacy1 {
+  text-decoration: underline;
+}
+
+.conditions-of-useprivacy-notic3 {
+  margin-bottom: 0;
+}
+
+.conditions-of-useprivacy-notic2 {
+  margin: 0;
+  padding-left: var(--padding-29xl);
+}
+
+.conditions-of-useprivacy-container1 {
+  position: absolute;
+  top: 2244px;
+  left: 205px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  text-align: center;
+}
+
+.banner1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 238px;
+}
+
+.serch-box-11,
+.serch-box-21 {
+  position: absolute;
+  top: 59px;
+  left: 576px;
+  background-color: var(--color-white);
+  width: 532px;
+  height: 84px;
+}
+
+.serch-box-21 {
+  top: 57px;
+  left: 370px;
+  background-color: var(--color-teal);
+  width: 206px;
+}
+
+.menu-icon1 {
+  position: absolute;
+  top: 49px;
+  left: 179px;
+  width: 66px;
+  height: 48px;
+}
+
+.shoping-chart-icon1 {
+  position: absolute;
+  top: 52px;
+  left: 1233px;
+  width: 106.58px;
+  height: 78.41px;
+}
+
+.search1 {
+  position: absolute;
+  top: 75px;
+  left: 414px;
+}
+
+.logo-1-icon1,
+.logo-2-icon1 {
+  position: absolute;
+  top: 0;
+  left: 12.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-1-icon1 {
+  top: 10.49px;
+  left: 0;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.banner-group,
+.serch-box-1-group {
+  position: absolute;
+  top: 42px;
+  left: 25px;
+  width: 1339.58px;
+  height: 166.85px;
+}
+
+.banner-group {
+  top: -3px;
+  left: 0;
+  width: 1440px;
+  height: 238px;
+  color: var(--color-white);
+  font-family: var(--font-noto-sans-sc);
+}
+
+.cart {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 2376px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-noto-sans);
+}
+
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+.footer3 {
+  position: absolute;
+  top: 3075px;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 598px;
+}
+
+.logo-3-icon3,
+.logo-4-icon3 {
+  position: absolute;
+  top: 3252px;
+  left: 1249.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-4-icon3 {
+  top: 3262.49px;
+  left: 1237px;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.get-to-know3 {
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.blank-line9 {
+  margin: 0;
+}
+
+.get-to-know-container3,
+.need-help-your-container3 {
+  position: absolute;
+  top: 3121px;
+  left: 92px;
+  text-align: center;
+}
+
+.need-help-your-container3 {
+  top: 3119px;
+  left: 429px;
+  display: inline-block;
+  width: 420px;
+  height: 356px;
+}
+
+.contact-infotitiansorg-800-3-container3 {
+  position: absolute;
+  top: 3133px;
+  left: 906px;
+  text-align: center;
+}
+
+.clothes-child,
+.clothes-item {
+  position: absolute;
+  top: 3512px;
+  left: 0;
+  width: 1440px;
+  height: 11px;
+}
+
+.clothes-item {
+  top: 3519px;
+  background-color: var(--color-darkorange);
+  height: 154px;
+}
+
+.conditions-of-useprivacy3 {
+  text-decoration: underline;
+}
+
+.conditions-of-useprivacy-notic7 {
+  margin-bottom: 0;
+}
+
+.conditions-of-useprivacy-notic6 {
+  margin: 0;
+  padding-left: var(--padding-29xl);
+}
+
+.conditions-of-useprivacy-container3 {
+  position: absolute;
+  top: 3543px;
+  left: 182px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  text-align: center;
+}
+
+.clothes-child1,
+.clothes-inner {
+  position: absolute;
+  top: 3182px;
+  left: 424px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.clothes-child1 {
+  top: 3193px;
+  left: 845px;
+}
+
+.whats-fresh-icon3 {
+  position: absolute;
+  top: 238px;
+  left: 0;
+  width: 1440px;
+  height: 348px;
+}
+
+.just-in1 {
+  position: absolute;
+  top: 263px;
+  left: 601px;
+  font-size: var(--font-size-21xl);
+  font-weight: 600;
+}
+
+.clothes-child2,
+.clothes-child3,
+.clothes-child4 {
+  position: absolute;
+  top: 233px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.clothes-child3,
+.clothes-child4 {
+  top: 3070px;
+}
+
+.clothes-child4 {
+  top: 1311px;
+  left: 426px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.clothes-child5,
+.clothes-child6,
+.clothes-child7,
+.group-child22 {
+  position: absolute;
+  top: 722px;
+  left: 450px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.clothes-child6,
+.clothes-child7,
+.group-child22 {
+  left: 990px;
+}
+
+.clothes-child7,
+.group-child22 {
+  top: 1344px;
+  left: 970px;
+}
+
+.group-child22 {
+  top: 0;
+  left: 0;
+  background-color: var(--color-gainsboro);
+  width: 330px;
+  height: 320px;
+}
+
+.group-child23,
+.group-child24,
+.group-child25,
+.group-child27 {
+  position: absolute;
+  top: 511px;
+  left: 0;
+  background-color: var(--color-white);
+  width: 330px;
+  height: 320px;
+}
+
+.group-child24,
+.group-child25,
+.group-child27 {
+  left: 967px;
+}
+
+.group-child25,
+.group-child27 {
+  top: 0;
+  left: 483px;
+  background-color: var(--color-gainsboro);
+}
+
+.group-child27 {
+  left: 972px;
+  background-color: var(--color-white);
+}
+
+.image-3-icon4 {
+  position: absolute;
+  top: 5px;
+  left: 1002px;
+  width: 276px;
+  height: 309px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rectangle-parent1 {
+  position: absolute;
+  top: 673px;
+  left: 44px;
+  width: 1302px;
+  height: 831px;
+}
+
+.girls-distressed-denim1,
+.girls-peace-love {
+  position: absolute;
+  top: 1004px;
+  left: 66px;
+  display: inline-block;
+  width: 360px;
+}
+
+.girls-distressed-denim1 {
+  top: 1017px;
+  left: 499px;
+  width: 441px;
+}
+
+.boys-cool-in1,
+.toddler-girls-uniform,
+.toddler-girls-uniform1 {
+  position: absolute;
+  top: 1637px;
+  left: 80px;
+  display: inline-block;
+  width: 278px;
+}
+
+.boys-cool-in1,
+.toddler-girls-uniform1 {
+  left: 537px;
+  width: 356px;
+}
+
+.toddler-girls-uniform1 {
+  top: 1650px;
+  left: 1030px;
+  font-family: var(--font-inter);
+  width: 325px;
+}
+
+.girls-girl-graphic {
+  position: absolute;
+  top: 1039px;
+  left: 1050px;
+  display: inline-block;
+  width: 314px;
+}
+
+.clothes-child8,
+.image-1-icon1 {
+  position: absolute;
+  top: 1191px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.image-1-icon1 {
+  top: 673px;
+  left: 44px;
+  width: 330px;
+  height: 324px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-4-icon1,
+.image-5-icon1,
+.image-6-icon5 {
+  position: absolute;
+  top: 1268px;
+  left: 80px;
+  width: 242px;
+  height: 311px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-5-icon1,
+.image-6-icon5 {
+  top: 1289px;
+  left: 1062px;
+  width: 228px;
+  height: 299px;
+}
+
+.image-6-icon5 {
+  top: 664px;
+  left: 525px;
+  width: 334px;
+  height: 347px;
+}
+
+.group-child28,
+.group-child29,
+.group-child30,
+.group-child31,
+.group-child33 {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: var(--color-white);
+  width: 330px;
+  height: 320px;
+}
+
+.group-child29,
+.group-child30,
+.group-child31,
+.group-child33 {
+  top: 521px;
+}
+
+.group-child30,
+.group-child31,
+.group-child33 {
+  left: 967px;
+}
+
+.group-child31,
+.group-child33 {
+  top: 10px;
+  left: 483px;
+  background-color: var(--color-gainsboro);
+}
+
+.group-child33 {
+  left: 972px;
+  background-color: var(--color-white);
+}
+
+.image-19-icon1,
+.image-3-icon5,
+.image-6-icon6 {
+  position: absolute;
+  top: 15px;
+  left: 1002px;
+  width: 276px;
+  height: 309px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-19-icon1,
+.image-6-icon6 {
+  top: 626px;
+  left: 481px;
+  width: 330px;
+  height: 320px;
+}
+
+.image-19-icon1 {
+  top: 0;
+  left: 41px;
+  width: 247px;
+  height: 324px;
+}
+
+.clothes-child14,
+.rectangle-parent2 {
+  position: absolute;
+  top: 663px;
+  left: 44px;
+  width: 1302px;
+  height: 946px;
+}
+
+.clothes-child14 {
+  top: 2531px;
+  left: 427px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.clothes-child15,
+.clothes-child16,
+.clothes-child17,
+.image-23-icon {
+  position: absolute;
+  top: 1942px;
+  left: 451px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.clothes-child16,
+.clothes-child17,
+.image-23-icon {
+  left: 991px;
+}
+
+.clothes-child17,
+.image-23-icon {
+  top: 2564px;
+  left: 971px;
+}
+
+.image-23-icon {
+  top: 562px;
+  left: 24px;
+  width: 278px;
+  height: 364px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rectangle-parent3 {
+  position: absolute;
+  top: 1893px;
+  left: 45px;
+  width: 1302px;
+  height: 926px;
+}
+
+.boys-camo-dino {
+  position: absolute;
+  top: 2224px;
+  left: 67px;
+  display: inline-block;
+  width: 360px;
+}
+
+.boys-basketball-shorts,
+.boys-football-player {
+  position: absolute;
+  top: 2227px;
+  left: 500px;
+  display: inline-block;
+  width: 441px;
+}
+
+.boys-football-player {
+  top: 2821px;
+  left: 79px;
+  width: 278px;
+}
+
+.girls-future-graphic,
+.unisex-baby-and {
+  position: absolute;
+  top: 2839px;
+  left: 465px;
+  display: inline-block;
+  width: 500px;
+}
+
+.girls-future-graphic {
+  top: 2870px;
+  left: 1031px;
+  font-family: var(--font-inter);
+  width: 329px;
+}
+
+.boys-basketball-shorts1 {
+  position: absolute;
+  top: 2227px;
+  left: 1047px;
+  display: inline-block;
+  width: 354px;
+}
+
+.clothes-child18,
+.image-11-icon1 {
+  position: absolute;
+  top: 2411px;
+  left: 1px;
+  width: 1439px;
+  height: 5.29px;
+}
+
+.image-11-icon1 {
+  top: 1893px;
+  left: 45px;
+  width: 330px;
+  height: 324px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.group-child38,
+.group-child39,
+.group-child40 {
+  position: absolute;
+  top: 29px;
+  left: 0;
+  background-color: var(--color-white);
+  width: 330px;
+  height: 320px;
+}
+
+.group-child39,
+.group-child40 {
+  top: 540px;
+  left: 967px;
+}
+
+.group-child40 {
+  top: 29px;
+  left: 972px;
+}
+
+.image-20-icon1,
+.image-21-icon {
+  position: absolute;
+  top: 39px;
+  left: 24px;
+  width: 297px;
+  height: 299px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-21-icon {
+  top: 0;
+  left: 509px;
+  width: 272px;
+  height: 349px;
+}
+
+.clothes-child24,
+.rectangle-parent4 {
+  position: absolute;
+  top: 1864px;
+  left: 45px;
+  width: 1302px;
+  height: 860px;
+}
+
+.clothes-child24 {
+  top: 1829px;
+  left: 1px;
+  width: 1439px;
+  height: 5.29px;
+}
+
+.image-22-icon,
+.image-24-icon,
+.image-25-icon {
+  position: absolute;
+  top: 1875px;
+  left: 1084px;
+  width: 247px;
+  height: 324px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-24-icon,
+.image-25-icon {
+  top: 2455px;
+  left: 525px;
+  width: 312px;
+  height: 409px;
+}
+
+.image-25-icon {
+  top: 2464px;
+  left: 1047px;
+  width: 286px;
+  height: 375px;
+}
+
+.banner3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 238px;
+}
+
+.serch-box-13,
+.serch-box-23 {
+  position: absolute;
+  top: 59px;
+  left: 576px;
+  background-color: var(--color-white);
+  width: 532px;
+  height: 84px;
+}
+
+.serch-box-23 {
+  top: 57px;
+  left: 370px;
+  background-color: var(--color-teal);
+  width: 206px;
+}
+
+.menu-icon3 {
+  position: absolute;
+  top: 49px;
+  left: 179px;
+  width: 66px;
+  height: 48px;
+}
+
+.shoping-chart-icon3 {
+  position: absolute;
+  top: 52px;
+  left: 1233px;
+  width: 106.58px;
+  height: 78.41px;
+  cursor: pointer;
+}
+
+.search3 {
+  position: absolute;
+  top: 75px;
+  left: 414px;
+}
+
+.logo-1-icon3,
+.logo-2-icon3 {
+  position: absolute;
+  top: 0;
+  left: 12.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-1-icon3 {
+  top: 10.49px;
+  left: 0;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.banner-parent1,
+.serch-box-1-parent1 {
+  position: absolute;
+  top: 42px;
+  left: 25px;
+  width: 1339.58px;
+  height: 166.85px;
+}
+
+.banner-parent1 {
+  top: -3px;
+  left: 0;
+  width: 1440px;
+  height: 238px;
+  color: var(--color-white);
+  font-family: var(--font-noto-sans-sc);
+}
+
+.clothes1 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 3673px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-noto-sans);
+}
+
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+.footer4 {
+  position: absolute;
+  top: 1686px;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 598px;
+  display: none;
+}
+
+.logo-3-icon4,
+.logo-4-icon4 {
+  position: absolute;
+  top: 1863px;
+  left: 1249.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-4-icon4 {
+  top: 1873.49px;
+  left: 1237px;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.get-to-know4 {
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.get-to-know-container4 {
+  position: absolute;
+  top: 1732px;
+  left: 92px;
+}
+
+.need-help-your-container4 {
+  position: absolute;
+  top: 1730px;
+  left: 429px;
+  display: inline-block;
+  width: 420px;
+  height: 356px;
+}
+
+.contact-infotitiansorg-800-3-container4 {
+  position: absolute;
+  top: 1744px;
+  left: 906px;
+}
+
+.about-child,
+.about-item {
+  position: absolute;
+  top: 2123px;
+  left: 0;
+  width: 1440px;
+  height: 11px;
+}
+
+.about-item {
+  top: 2130px;
+  background-color: var(--color-darkorange);
+  height: 154px;
+}
+
+.conditions-of-use {
+  color: inherit;
+}
+
+.privacy-notice {
+  text-decoration: underline;
+}
+
+.your-ads-privacy-choices {
+  color: var(--font-inherit);
+}
+
+.conditions-of-useprivacy-notic9 {
+  margin-bottom: 0;
+}
+
+.conditions-of-useprivacy-notic8 {
+  margin: 0;
+  padding-left: var(--padding-29xl);
+}
+
+.conditions-of-useprivacy-container4 {
+  position: absolute;
+  top: 2159px;
+  left: 179px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  color: var(--font-inherit);
+}
+
+.about-child1,
+.about-inner {
+  position: absolute;
+  top: 1793px;
+  left: 424px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.about-child1 {
+  top: 1804px;
+  left: 845px;
+}
+
+.whats-fresh-icon4 {
+  position: absolute;
+  top: 230px;
+  left: 0;
+  width: 1440px;
+  height: 348px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.whats-fresh {
+  position: absolute;
+  top: 317px;
+  left: 573px;
+  font-size: var(--font-size-45xl);
+  font-weight: 600;
+  color: var(--color-darkorange);
+  text-align: left;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about-child2,
+.about-child3 {
+  position: absolute;
+  top: 233px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.about-child3 {
+  top: 1686px;
+}
+
+.about-titans {
+  margin: 0;
+  font-size: var(--font-size-21xl);
+  font-weight: 600;
+}
+
+.welcome-to-titans {
+  margin: 0;
+}
+
+.about-titans-welcome-container {
+  position: absolute;
+  top: 665px;
+  left: 76px;
+  white-space: pre-wrap;
+  text-align: left;
+  display: inline-block;
+  width: 1310px;
+  height: 891px;
+}
+
+.banner4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 238px;
+}
+
+.serch-box-14,
+.serch-box-24 {
+  position: absolute;
+  top: 59px;
+  left: 576px;
+  background-color: var(--color-white);
+  width: 532px;
+  height: 84px;
+}
+
+.serch-box-24 {
+  top: 57px;
+  left: 370px;
+  background-color: var(--color-teal);
+  width: 206px;
+}
+
+.menu-icon4 {
+  position: absolute;
+  top: 49px;
+  left: 179px;
+  width: 66px;
+  height: 48px;
+}
+
+.shoping-chart-icon4 {
+  position: absolute;
+  top: 52px;
+  left: 1233px;
+  width: 106.58px;
+  height: 78.41px;
+  cursor: pointer;
+}
+
+.search4 {
+  position: absolute;
+  top: 75px;
+  left: 414px;
+}
+
+.logo-1-icon4,
+.logo-2-icon4 {
+  position: absolute;
+  top: 0;
+  left: 12.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-1-icon4 {
+  top: 10.49px;
+  left: 0;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.banner-parent2,
+.serch-box-1-parent2 {
+  position: absolute;
+  top: 42px;
+  left: 25px;
+  width: 1339.58px;
+  height: 166.85px;
+}
+
+.banner-parent2 {
+  top: -3px;
+  left: 0;
+  width: 1440px;
+  height: 238px;
+  text-align: left;
+  color: var(--color-white);
+  font-family: var(--font-noto-sans-sc);
+}
+
+.about1 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 2284px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-noto-sans);
+}
+
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+.footer5 {
+  position: absolute;
+  top: 2053px;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 598px;
+}
+
+.logo-3-icon5,
+.logo-4-icon5 {
+  position: absolute;
+  top: 2230px;
+  left: 1249.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-4-icon5 {
+  top: 2240.49px;
+  left: 1237px;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.get-to-know5 {
+  margin: 0;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.blank-line18 {
+  margin: 0;
+}
+
+.get-to-know-container5,
+.need-help-your-container5 {
+  position: absolute;
+  top: 2099px;
+  left: 92px;
+  text-align: center;
+}
+
+.need-help-your-container5 {
+  top: 2097px;
+  left: 429px;
+  display: inline-block;
+  width: 420px;
+  height: 356px;
+}
+
+.contact-infotitiansorg-800-3-container5 {
+  position: absolute;
+  top: 2111px;
+  left: 906px;
+  text-align: center;
+}
+
+.home-child,
+.home-item {
+  position: absolute;
+  top: 2490px;
+  left: 0;
+  width: 1440px;
+  height: 11px;
+}
+
+.home-item {
+  top: 2497px;
+  background-color: var(--color-darkorange);
+  height: 154px;
+}
+
+.conditions-of-useprivacy4 {
+  text-decoration: underline;
+}
+
+.conditions-of-useprivacy-notic11 {
+  margin-bottom: 0;
+}
+
+.conditions-of-useprivacy-notic10 {
+  margin: 0;
+  padding-left: var(--padding-29xl);
+}
+
+.conditions-of-useprivacy-container5 {
+  position: absolute;
+  top: 2526px;
+  left: 180px;
+  font-size: var(--font-inherit);
+  font-family: var(--font-inherit);
+  text-align: center;
+}
+
+.home-child1,
+.home-inner {
+  position: absolute;
+  top: 2160px;
+  left: 424px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.home-child1 {
+  top: 1518px;
+  left: 426px;
+}
+
+.home-child2,
+.home-child3,
+.home-child4,
+.home-child5 {
+  position: absolute;
+  top: 929px;
+  left: 450px;
+  width: 5px;
+  height: 226.02px;
+}
+
+.home-child3,
+.home-child4,
+.home-child5 {
+  left: 990px;
+}
+
+.home-child4,
+.home-child5 {
+  top: 1551px;
+  left: 970px;
+}
+
+.home-child5 {
+  top: 2171px;
+  left: 845px;
+}
+
+.group-child41,
+.group-child42,
+.group-child43 {
+  position: absolute;
+  top: 118px;
+  left: 6px;
+  background-color: var(--color-gainsboro);
+  width: 330px;
+  height: 320px;
+}
+
+.group-child42,
+.group-child43 {
+  top: 629px;
+  background-color: var(--color-white);
+}
+
+.group-child43 {
+  left: 973px;
+}
+
+.group-child44 {
+  display: none;
+}
+
+.group-child44,
+.group-child45,
+.group-child46 {
+  position: absolute;
+  top: 118px;
+  left: 489px;
+  background-color: var(--color-gainsboro);
+  width: 330px;
+  height: 320px;
+}
+
+.group-child46 {
+  left: 978px;
+  background-color: var(--color-white);
+}
+
+.just-in2,
+.suggestions {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  font-weight: 600;
+}
+
+.just-in2 {
+  top: 664px;
+  left: 0;
+}
+
+.image-3-icon7,
+.image-6-icon7 {
+  position: absolute;
+  top: 123px;
+  left: 1008px;
+  width: 276px;
+  height: 309px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-6-icon7 {
+  top: 724px;
+  left: 486px;
+  width: 330px;
+  height: 320px;
+}
+
+.rectangle-parent5 {
+  position: absolute;
+  top: 762px;
+  left: 38px;
+  width: 1308px;
+  height: 1044px;
+}
+
+.fisher-price-little-people2,
+.fisher-price-retro-chatter3 {
+  position: absolute;
+  top: 1211px;
+  left: 66px;
+  display: inline-block;
+  width: 302px;
+}
+
+.fisher-price-little-people2 {
+  top: 1214px;
+  left: 499px;
+  width: 441px;
+}
+
+.toddler-girls-uniform4,
+.toddler-girls-uniform5,
+.vtech-sit-to-stand-learning4 {
+  position: absolute;
+  top: 1844px;
+  left: 80px;
+  display: inline-block;
+  width: 278px;
+}
+
+.toddler-girls-uniform5,
+.vtech-sit-to-stand-learning4 {
+  left: 569px;
+}
+
+.toddler-girls-uniform5 {
+  top: 1857px;
+  left: 1030px;
+  font-family: var(--font-inter);
+  width: 325px;
+}
+
+.girls-girl-graphic2 {
+  position: absolute;
+  top: 1246px;
+  left: 1050px;
+  display: inline-block;
+  width: 314px;
+}
+
+.home-child6,
+.home-child7,
+.home-child8 {
+  position: absolute;
+  top: 233px;
+  left: 0;
+  width: 1440px;
+  height: 5.29px;
+}
+
+.home-child7,
+.home-child8 {
+  top: 2053px;
+}
+
+.home-child8 {
+  top: 1398px;
+}
+
+.image-1-icon2,
+.image-4-icon2,
+.image-5-icon2 {
+  position: absolute;
+  top: 880px;
+  left: 44px;
+  width: 330px;
+  height: 324px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-4-icon2,
+.image-5-icon2 {
+  top: 1475px;
+  left: 80px;
+  width: 242px;
+  height: 311px;
+}
+
+.image-5-icon2 {
+  top: 1496px;
+  left: 1062px;
+  width: 228px;
+  height: 299px;
+}
+
+.home-child9 {
+  position: absolute;
+  top: 238px;
+  left: 0;
+  background-color: var(--color-darkorange);
+  width: 1440px;
+  height: 143px;
+}
+
+.welcome-to-titian {
+  position: absolute;
+  top: 271px;
+  left: 272px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  width: 949px;
+}
+
+.whats-fresh-icon5 {
+  position: absolute;
+  top: 381px;
+  left: 0;
+  width: 1440px;
+  height: 348px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.whats-fresh1 {
+  position: absolute;
+  top: 456px;
+  left: 574px;
+  font-size: var(--font-size-45xl);
+  font-weight: 600;
+  color: var(--color-darkorange);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.image-12-icon1 {
+  position: absolute;
+  top: 868px;
+  left: 524px;
+  width: 334px;
+  height: 347px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-skyblue);
+  width: 1440px;
+  height: 235px;
+}
+
+.serch-box-15,
+.serch-box-25 {
+  position: absolute;
+  top: 59px;
+  left: 576px;
+  background-color: var(--color-white);
+  width: 532px;
+  height: 84px;
+}
+
+.serch-box-25 {
+  top: 57px;
+  left: 370px;
+  background-color: var(--color-teal);
+  width: 206px;
+}
+
+.menu-icon5 {
+  position: absolute;
+  top: 54px;
+  left: 179px;
+  width: 66px;
+  height: 48px;
+}
+
+.shoping-chart-icon5 {
+  position: absolute;
+  top: 52px;
+  left: 1233px;
+  width: 106.58px;
+  height: 78.41px;
+  cursor: pointer;
+}
+
+.search5 {
+  position: absolute;
+  top: 75px;
+  left: 414px;
+}
+
+.logo-1-icon5,
+.logo-2-icon5 {
+  position: absolute;
+  top: 0;
+  left: 12.13px;
+  width: 101.87px;
+  height: 166.85px;
+}
+
+.logo-1-icon5 {
+  top: 10.49px;
+  left: 0;
+  width: 99.32px;
+  height: 139.14px;
+}
+
+.banner-parent3,
+.serch-box-1-parent3 {
+  position: absolute;
+  top: 39px;
+  left: 25px;
+  width: 1339.58px;
+  height: 166.85px;
+}
+
+.banner-parent3 {
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 235px;
+  color: var(--color-white);
+  font-family: var(--font-noto-sans-sc);
+}
+
+.home1 {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 2651px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-black);
+  font-family: var(--font-noto-sans);
+}
+
+.navagation-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-teal);
+  width: 576px;
+  height: 896px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner,
+.navagation-item {
+  position: absolute;
+  top: 169.5px;
+  left: 33.5px;
+  border-top: 5px solid var(--color-white);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 509px;
+  height: 5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2,
+.navagation-inner {
+  top: 281.5px;
+}
+
+.line-div,
+.navagation-child1,
+.navagation-child2 {
+  top: 427.5px;
+}
+
+.navagation-child1,
+.navagation-child2 {
+  top: 553.5px;
+}
+
+.navagation-child2 {
+  top: 663.5px;
+  left: 27.5px;
+}
+
+.about,
+.clothes,
+.games,
+.home,
+.profile-and-settings {
+  position: absolute;
+  top: 462px;
+  left: 53px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.about,
+.clothes,
+.games,
+.home {
+  top: 203px;
+  left: 52px;
+}
+
+.about,
+.games,
+.home {
+  top: 332px;
+  left: 53px;
+}
+
+.about,
+.home {
+  top: 75px;
+  left: 69px;
+}
+
+.about {
+  top: 579px;
+  left: 53px;
+}
+
+.navagation {
+  position: relative;
+  background-color: var(--color-white);
+  width: 576px;
+  height: 896px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+  font-family: var(--font-noto-sans);
+}
+
+/* =============
+    Typography
+============= */
+/* =============
+    Buttons
+============= */
+/* =============
+    Forms
+============= */
+[type=text], [type=password], [type=date], [type=datetime], [type=datetime-local], [type=month], [type=week], [type=email], [type=number], [type=search], [type=tel], [type=time], [type=url], [type=color], textarea {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=datetime]:focus, [type=datetime-local]:focus, [type=month]:focus, [type=week]:focus, [type=email]:focus, [type=number]:focus, [type=search]:focus, [type=tel]:focus, [type=time]:focus, [type=url]:focus, [type=color]:focus, textarea:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+}
+
+/* =============
+    Navigation
+============= */
+/* =============
+    Header
+============= */
+/* =============
+    Footer
+============= */
