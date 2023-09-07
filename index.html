@@ -8,7 +8,7 @@
     /* CSS for header elements */
     header {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       padding: 10px 20px;
       background-color: #333; /* Adjust the background color as needed */
@@ -33,9 +33,26 @@
       margin-right: 20px;
     }
 
+    .subheader {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .subheader ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .subheader li {
+      margin-right: 20px;
+    }
+
     .header-tools {
       display: flex;
       align-items: center;
+      margin-top: 10px;
     }
 
     .location-bar select {
@@ -69,6 +86,15 @@
         <li><a href="/games">Games</a></li>
       </ul>
     </nav>
+
+    <div class="subheader">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/clothes">Clothes</a></li>
+        <li><a href="/navigation">Navigation</a></li>
+        <li><a href="/games">Games</a></li>
+      </ul>
+    </div>
 
     <div class="header-tools">
       <div class="location-bar">
