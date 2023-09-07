@@ -15,17 +15,11 @@
       color: #fff; /* Adjust the text color as needed */
     }
 
-    .main-header .header-logo {
-      display: flex;
-      align-items: center;
-    }
-
     .main-header .header-logo a {
       color: #fff; /* Adjust the logo text color as needed */
       text-decoration: none;
       font-size: 24px;
       font-weight: bold;
-      margin-right: 10px; /* Add margin to separate logo from location */
     }
 
     .main-header .location-bar {
@@ -59,7 +53,7 @@
     }
 
     .main-header nav li {
-      margin-right: 10px; /* Reduce margin */
+      margin-right: 20px;
     }
 
     /* CSS for subheader */
@@ -77,7 +71,7 @@
     }
 
     .sub-header li {
-      margin-right: 10px; /* Reduce margin */
+      margin-right: 20px;
     }
 
     /* Shared CSS for header tools */
@@ -116,12 +110,12 @@
 <body>
   <!-- Main Header -->
   <header class="main-header">
+    <div class="location-toggle" onclick="toggleLocationDropdown()">Choose Location for Accurate Options</div>
     <div class="header-logo">
       <a href="/">Titans</a>
     </div>
 
     <div class="location-bar">
-      <div class="location-toggle" onclick="toggleLocationDropdown()">Choose Location for Accurate Options</div>
       <div class="location-dropdown" id="locationDropdown">
         <select>
           <option value="location1">Location 1</option>
