@@ -5,66 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Website</title>
   <style>
-    /* CSS for header elements */
-    header {
+    /* CSS for main header */
+    .main-header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       padding: 10px 20px;
       background-color: #333; /* Adjust the background color as needed */
       color: #fff; /* Adjust the text color as needed */
     }
 
-    .header-logo a {
+    .main-header .header-logo a {
       color: #fff; /* Adjust the logo text color as needed */
       text-decoration: none;
       font-size: 24px;
       font-weight: bold;
     }
 
-    nav ul {
+    .main-header nav ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
       display: flex;
     }
 
-    nav li {
+    .main-header nav li {
       margin-right: 20px;
     }
 
-    .subheader {
-      display: flex;
-      margin-top: 10px;
+    /* CSS for subheader */
+    .sub-header {
+      background-color: #333; /* Adjust the background color as needed */
+      color: #fff; /* Adjust the text color as needed */
+      padding: 10px 20px;
     }
 
-    .subheader ul {
+    .sub-header ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
       display: flex;
     }
 
-    .subheader li {
+    .sub-header li {
       margin-right: 20px;
     }
 
+    /* Shared CSS for header tools */
     .header-tools {
       display: flex;
       align-items: center;
       margin-top: 10px;
     }
 
-    .location-bar select {
+    .header-tools .location-bar select {
       margin-right: 10px;
     }
 
-    .header-search form {
+    .header-tools .header-search form {
       margin-right: 10px;
     }
 
-    .sign-in a,
-    .cart a {
+    .header-tools .sign-in a,
+    .header-tools .cart a {
       color: #fff; /* Adjust the text color as needed */
       text-decoration: none;
       font-weight: bold;
@@ -72,8 +75,8 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <!-- Main Header -->
+  <header class="main-header">
     <div class="header-logo">
       <a href="/">Titans</a>
     </div>
@@ -86,15 +89,6 @@
         <li><a href="/games">Games</a></li>
       </ul>
     </nav>
-
-    <div class="subheader">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/clothes">Clothes</a></li>
-        <li><a href="/navigation">Navigation</a></li>
-        <li><a href="/games">Games</a></li>
-      </ul>
-    </div>
 
     <div class="header-tools">
       <div class="location-bar">
@@ -120,6 +114,16 @@
         <a href="/cart">Cart</a>
       </div>
     </div>
+  </header>
+
+  <!-- Subheader -->
+  <header class="sub-header">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/clothes">Clothes</a></li>
+      <li><a href="/navigation">Navigation</a></li>
+      <li><a href="/games">Games</a></li>
+    </ul>
   </header>
 
   <!-- Your webpage content goes here -->
