@@ -5,91 +5,191 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Website</title>
   <style>
-    /* CSS for main header, subheader, and footer (previously defined styles) */
-
-    /* CSS for the body content */
-    .content {
+    /* CSS for main header */
+    .main-header {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333; /* Adjust the background color as needed */
+      color: #fff; /* Adjust the text color as needed */
     }
 
-    .box {
-      width: 100px;
-      height: 100px;
-      background-color: #ddd;
-      border: 1px solid #333;
-      margin: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
+    .main-header .header-logo a {
+      color: #fff; /* Adjust the logo text color as needed */
+      text-decoration: none;
+      font-size: 24px;
       font-weight: bold;
     }
+
+    .main-header .location-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    .main-header .location-toggle {
+      color: #fff; /* Adjust the text color as needed */
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .main-header .location-dropdown {
+      display: none;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .main-header .location-dropdown.show {
+      display: block;
+    }
+
+    .main-header nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .main-header nav li {
+      margin-right: 20px;
+    }
+
+    /* CSS for subheader */
+    .sub-header {
+      text-align: center; /* Center-align subheader links */
+      background-color: #333; /* Adjust the background color as needed */
+      color: #fff; /* Adjust the text color to white */
+      padding: 10px 20px;
+    }
+
+    .sub-header ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center; /* Center-align subheader links */
+    }
+
+    .sub-header li {
+      margin-right: 20px;
+    }
+
+    .sub-header a {
+      color: #fff; /* Set the color of subheader links to white */
+      text-decoration: none;
+    }
+
+    /* Shared CSS for header tools */
+    .header-tools {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .header-tools .header-search {
+      flex: 1; /* Take up remaining space */
+      text-align: center; /* Center align the search bar */
+    }
+
+    .header-tools .header-search form {
+      display: flex; /* Center align the form content */
+      justify-content: center; /* Center align the form content */
+    }
+
+    .header-tools .header-search input[type="text"] {
+      width: 100%; /* Make the input fill the available space */
+    }
+
+    .header-tools .header-search button {
+      margin-left: 10px;
+    }
+
+    .header-tools .sign-in a,
+    .header-tools .cart a {
+      color: #fff; /* Adjust the text color as needed */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .header-tools .cart a {
+      margin-left: 40px; /* Add a 40px gap between Cart and Sign In */
+    }
+
+    .header-tools .sign-in a {
+      margin-left: 40px; /* Add a 40px gap between Search and Sign In */
+    }
+
+    /* CSS for the footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer h2 {
+      font-size: 24px;
+    }
+
   </style>
 </head>
 <body>
   <!-- Header -->
   <header class="main-header">
-    <!-- Header content (previously defined) -->
+    <div class="location-toggle" onclick="toggleLocationDropdown()">Choose Location for Accurate Options</div>
+    <div class="header-logo">
+      <a href="/">Titans</a>
+    </div>
+
+    <div class="location-bar">
+      <div class="location-dropdown" id="locationDropdown">
+        <select>
+          <option value="location1">Location 1</option>
+          <option value="location2">Location 2</option>
+          <option value="location3">Location 3</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="header-tools">
+      <div class="header-search">
+        <form>
+          <input type="text" placeholder="Search...">
+          <button type="submit">Go</button>
+        </form>
+      </div>
+
+      <div class="sign-in">
+        <a href="/signin">Sign In</a>
+      </div>
+
+      <div class="cart">
+        <a href="/cart">Cart</a>
+      </div>
+    </div>
   </header>
 
   <!-- Subheader -->
   <header class="sub-header">
-    <!-- Subheader content (previously defined) -->
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/clothes">Clothes</a></li>
+      <li><a href="/navigation">Navigation</a></li>
+      <li><a href="/games">Games</a></li>
+    </ul>
   </header>
 
-  <!-- Body Content -->
-  <div class="content">
-    <!-- Row 1 -->
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-
-    <!-- Row 2 -->
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">6</div>
-
-    <!-- Row 3 -->
-    <div class="box">7</div>
-    <div class="box">8</div>
-    <div class="box">9</div>
-  </div>
-
-  <!-- Additional content -->
-  <div class="additional-content">
-    <h2>Trending</h2>
-    <!-- Add content related to Trending here -->
-  </div>
-
-  <div class="additional-content">
-    <h2>Top deals</h2>
-    <!-- Add content related to Top deals here -->
-  </div>
-
-  <div class="additional-content">
-    <h2>Best sellers</h2>
-    <!-- Add content related to Best sellers here -->
-  </div>
-
-  <div class="additional-content">
-    <h2>Last-minute deal</h2>
-    <!-- Add content related to Last-minute deal here -->
-  </div>
-
-  <div class="additional-content">
-    <h2>School supplies</h2>
-    <!-- Add content related to School supplies here -->
-  </div>
+  <!-- Your webpage content goes here -->
 
   <!-- Footer -->
   <footer class="footer">
-    <!-- Footer content (previously defined) -->
+    <h2>Get to know us</h2>
+    <h2>Let us help you</h2>
   </footer>
 
-  <!-- Full code here (previously defined) -->
+  <!-- Full code here -->
 
   <script>
     function toggleLocationDropdown() {
