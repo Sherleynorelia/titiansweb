@@ -15,11 +15,6 @@
       color: #fff; /* Adjust the text color as needed */
     }
 
-    .main-header .header-logo {
-      display: flex;
-      align-items: center;
-    }
-
     .main-header .header-logo a {
       color: #fff; /* Adjust the logo text color as needed */
       text-decoration: none;
@@ -30,12 +25,16 @@
     .main-header .location-bar {
       display: flex;
       align-items: center;
-      margin-left: 20px; /* Add margin to separate location from logo */
+    }
+
+    .main-header .location-toggle {
+      color: #fff; /* Adjust the text color as needed */
+      cursor: pointer;
+      margin-right: 10px;
     }
 
     .main-header .location-dropdown {
       display: none;
-      position: absolute;
       background-color: #fff;
       border: 1px solid #ccc;
       padding: 10px;
@@ -46,30 +45,15 @@
       display: block;
     }
 
-    .main-header .header-tools {
+    .main-header nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
       display: flex;
-      align-items: center;
     }
 
-    .main-header .header-tools .header-search {
-      flex-grow: 1; /* Grow the search bar to take up available space */
-      text-align: center; /* Center-align the search bar */
-    }
-
-    .main-header .header-tools .header-search form {
-      display: flex;
-      align-items: center;
-    }
-
-    .main-header .header-tools .header-search input[type="text"] {
-      width: 100%; /* Make the search input take up full width */
-    }
-
-    .main-header .header-tools .sign-in a,
-    .main-header .header-tools .cart a {
-      color: #fff; /* Adjust the text color as needed */
-      text-decoration: none;
-      font-weight: bold;
+    .main-header nav li {
+      margin-right: 20px;
     }
 
     /* CSS for subheader */
@@ -88,6 +72,38 @@
 
     .sub-header li {
       margin-right: 20px;
+    }
+
+    /* Shared CSS for header tools */
+    .header-tools {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .header-tools .header-search {
+      flex: 1; /* Take up remaining space */
+      text-align: center; /* Center align the search bar */
+    }
+
+    .header-tools .header-search form {
+      display: flex; /* Center align the form content */
+      justify-content: center; /* Center align the form content */
+    }
+
+    .header-tools .header-search input[type="text"] {
+      width: 100%; /* Make the input fill the available space */
+    }
+
+    .header-tools .header-search button {
+      margin-left: 10px;
+    }
+
+    .header-tools .sign-in a,
+    .header-tools .cart a {
+      color: #fff; /* Adjust the text color as needed */
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
