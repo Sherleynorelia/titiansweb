@@ -1,0 +1,99 @@
+/* Reset some default styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Global styles */
+a {
+    text-decoration: none;
+}
+
+/* Top bar styles */
+#top-bar {
+    background-color: #FF9900;
+    color: #fff;
+    padding: 10px;
+}
+
+#top-bar #logo img {
+    margin-right: 10px;
+}
+
+#top-bar #category-dropdown .dropdown-cat .nav-link {
+    color: #fff;
+}
+
+#top-bar #search {
+    max-width: 400px;
+}
+
+/* Second bar styles */
+#second-bar {
+    background-color: #222939;
+    color: #fff;
+    padding: 10px;
+}
+
+#second-bar #delivery-peek img {
+    margin-right: 5px;
+}
+
+/* Carousel styles */
+#carouselExampleIndicators {
+    margin-top: 20px;
+}
+
+/* Tabs styles */
+#tabs {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.tab-option {
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab-active {
+    color: #FF9900;
+}
+
+/* Product container styles */
+#row-1,
+#row-2,
+#row-3 {
+    margin-top: 20px;
+}
+
+.m-4 {
+    margin: 20px !important;
+}
+
+.product-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-container img {
+    max-width: 100%;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    color: #FF9900;
+    margin-top: 5px;
+}
+
+/* Footer styles (add your footer styles here) */
+
+/* Responsive styles (add your responsive styles here) */
