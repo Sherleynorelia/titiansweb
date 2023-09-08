@@ -1,253 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website</title>
-  <style>
-    /* CSS for main header */
-    .main-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #333; /* Adjust the background color as needed */
-      color: #fff; /* Adjust the text color as needed */
-    }
-
-    .main-header .header-logo a {
-      color: #fff; /* Adjust the logo text color as needed */
-      text-decoration: none;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .main-header .location-bar {
-      display: flex;
-      align-items: center;
-    }
-
-    .main-header .location-toggle {
-      color: #fff; /* Adjust the text color as needed */
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    .main-header .location-dropdown {
-      display: none;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 10px;
-      z-index: 1;
-    }
-
-    .main-header .location-dropdown.show {
-      display: block;
-    }
-
-    .main-header nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
-
-    .main-header nav li {
-      margin-right: 20px;
-    }
-
-    /* CSS for subheader */
-    .sub-header {
-      text-align: center; /* Center-align subheader links */
-      background-color: #333; /* Adjust the background color as needed */
-      color: #fff; /* Adjust the text color to white */
-      padding: 10px 20px;
-    }
-
-    .sub-header ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center; /* Center-align subheader links */
-    }
-
-    .sub-header li {
-      margin-right: 20px;
-    }
-
-    .sub-header a {
-      color: #fff; /* Set the color of subheader links to white */
-      text-decoration: none;
-    }
-
-    /* Shared CSS for header tools */
-    .header-tools {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .header-tools .header-search {
-      flex: 1; /* Take up remaining space */
-      text-align: center; /* Center align the search bar */
-    }
-
-    .header-tools .header-search form {
-      display: flex; /* Center align the form content */
-      justify-content: center; /* Center align the form content */
-    }
-
-    .header-tools .header-search input[type="text"] {
-      width: 100%; /* Make the input fill the available space */
-    }
-
-    .header-tools .header-search button {
-      margin-left: 10px;
-    }
-
-    .header-tools .sign-in a,
-    .header-tools .cart a {
-      color: #fff; /* Adjust the text color as needed */
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .header-tools .cart a {
-      margin-left: 40px; /* Add a 40px gap between Cart and Sign In */
-    }
-
-    .header-tools .sign-in a {
-      margin-left: 40px; /* Add a 40px gap between Search and Sign In */
-    }
-
-    /* CSS for the footer */
-    .footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .footer h2 {
-      font-size: 24px;
-    }
-      
-    .product-category {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f5f5f5; /* Adjust the background color as needed */
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.product-category h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* Additional styling for each section can be added here */
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/CSS/styless.css">
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="main-header">
-    <div class="location-toggle" onclick="toggleLocationDropdown()">Choose Location for Accurate Options</div>
-    <div class="header-logo">
-      <a href="/">Titans</a>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-address">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option selected="selected">All</option>
+                    <option>Arts &amp; Crafts</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                    <option>Beauty &amp; Personal Care</option>
+                    <option>Books</option>
+                    <option>Boys' Fashion</option>
+                    <option>Computers</option>
+                    <option>Deals</option>
+                    <option>Digital Music</option>
+                    <option>Electronics</option>
+                    <option>Girls' Fashion</option>
+                    <option>Health &amp; Household</option>
+                    <option>Home &amp; Kitchen</option>
+                    <option>Industrial &amp; Scientific</option>
+                    <option>Kindle Store</option>
+                    <option>Luggage</option>
+                    <option>Men's Fashion</option>
+                    <option>Movies &amp; TV</option>
+                    <option>Music, CDs &amp; Vinyl</option>
+                    <option>Pet Supplies</option>
+                    <option>Prime Video</option>
+                    <option>Software</option>
+                    <option>Sports &amp; Outdoors</option>
+                    <option>Tools &amp; Home Improvement</option>
+                    <option>Toys &amp; Games</option>
+                    <option>Video Games</option>
+                    <option>Women's Fashion</option>
+                </select>
+                <input class="search-input" type="text" placeholder="Search....">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+
+            <div class="nav-language">
+                <i class="fa-solid fa-globe"></i> EN
+                <span><i class="fa-sharp fa-solid fa-circle-chevron-down"></i></span>
+            </div>
+
+            <div class="nav-signin">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">
+                    Account & Lists
+                    <i class="fa-sharp fa-solid fa-circle-chevron-down"></i>
+                </p>
+            </div>
+            <div class="nav-returns">
+                <p><span>Returns</span></p>
+                <p class="nav-second">
+                    & Orders
+                    <i class="fa-sharp fa-solid fa-circle-chevron-down"></i>
+                </p>
+            </div>
+
+            <div class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i> Cart
+            </div>
+        </div>
+
+        <div class="bottom-panel">
+            <div class="panel-alt">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-options">
+                <p>Today's Deals</p>
+                <p>Customer Service</p>
+                <p>Registry</p>
+                <p>Gift Cards</p>
+                <p>Sell</p>
+            </div>
+            <div class="panel-deals">
+                Shop deals in Electronics
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-msg">
+            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local
+                delivery. <a href="https://www.amazon.in/">Click here to go to Amazon.in</a></p>
+        </div>
     </div>
-    
 
-    <div class="location-bar">
-      <div class="location-dropdown" id="locationDropdown">
-        <select>
-          <option value="location1">Location 1</option>
-          <option value="location2">Location 2</option>
-          <option value="location3">Location 3</option>
-        </select>
-      </div>
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Clothes</h2>
+                <div class="box-img" style="background-image: url('/Images/box1_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Health & Personal Care</h2>
+                <div class="box-img" style="background-image: url('/Images/box2_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Furniture</h2>
+                <div class="box-img" style="background-image: url('/Images/box3_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Mobiles</h2>
+                <div class="box-img" style="background-image: url('/Images/box4_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Beauty Pics</h2>
+                <div class="box-img" style="background-image: url('/Images/box5_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-content">
+                <h2>Pet Care</h2>
+                <div class="box-img" style="background-image: url('/Images/box6_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>New Arrival in Toys</h2>
+                <div class="box-img" style="background-image: url('/Images/box7_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Discover Fashion Trends</h2>
+                <div class="box-img" style="background-image: url('/Images/box8_image.jpg');"></div>
+                <p>See More</p>
+            </div>
+        </div>
     </div>
 
-    <div class="header-tools">
-      <div class="header-search">
-        <form>
-          <input type="text" placeholder="Search...">
-          <button type="submit">Go</button>
-        </form>
-      </div>
+    <footer>
+        <div class="foot-panel1">
+            Back to Top
+        </div>
 
-      <div class="sign-in">
-        <a href="/signin">Sign In</a>
-      </div>
+        <div class="foot-panel2">
+            <ul>
+                <li>Get to Know Us</li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Amazon Newsletter</a></li>
+                <li><a href="#">About Amazon</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Press Center</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Amazon Devices</a></li>
+                <li><a href="#">Amazon Science</a></li>
+            </ul>
+            <ul>
+                <li>Make Money with Us</li>
+                <li><a href="#">Sell products on Amazon</a></li>
+                <li><a href="#">Sell on Amazon Business</a></li>
+                <li><a href="#">Sell apps on Amazon</a></li>
+                <li><a href="#">Become an Affiliate</a></li>
+                <li><a href="#">Advertise Your Products</a></li>
+                <li><a href="#">Self-Publish with Us</a></li>
+                <li><a href="#">Host an Amazon Hub</a></li>
+                <li><a href="#">See More Make Money with Us</a></li>
+            </ul>
+            <ul>
+                <li>Amazon Payment Products</li>
+                <li><a href="#">Amzon Business Card</a></li>
+                <li><a href="#">Shop with Points</a></li>
+                <li><a href="#">Reload Your Balance</a></li>
+                <li><a href="#">Amazon Currency Converter</a></li>
+            </ul>
+            <ul>
+                <li>Let Us Help You</li>
+                <li><a href="#">Amazon and COVID-19</a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Your Orders</a></li>
+                <li><a href="#">Shipping Rates & Policies</a></li>
+                <li><a href="#">Return & Replacements</a></li>
+                <li><a href="#">Manage Your Content and Devices</a></li>
+                <li><a href="#">Amazon Assistant</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
 
-      <div class="cart">
-        <a href="/cart">Cart</a>
-      </div>
-    </div>
-  </header>
+        <div class="foot-panel3">
+            <div class="logo">
 
- 
+            </div>
+        </div>
 
-  <!-- Subheader -->
-  <header class="sub-header">
-    <ul class="nav">
-      <li><a href="./home.html">Home</a></li>
-      <li><a href="./clothes.html">Clothes</a></li>
-      <li><a href="./games.html">Games</a></li>
-      <li><a href="./about.html">About</a></li>
-      <li id="profile-settings"><a href="./settings.html">Profile and Settings</a></li>
-    </ul>
-  </header>
-
-  <!-- Your webpage content goes here -->
-
-   <!-- Your webpage content goes here -->
-<div class="content">
-  <section class="product-category">
-    <h2>Trending</h2>
-    <!-- Add content for the "Trending" section here -->
-  </section>
-
-  <section class="product-category">
-    <h2>Top deals</h2>
-    <!-- Add content for the "Top deals" section here -->
-  </section>
-
-  <section class="product-category">
-    <h2>Best sellers</h2>
-    <!-- Add content for the "Best sellers" section here -->
-  </section>
-
-  <section class="product-category">
-    <h2>Last-minute deal</h2>
-    <!-- Add content for the "Last-minute deal" section here -->
-  </section>
-
-  <section class="product-category">
-    <h2>School supplies</h2>
-    <img src="https://www.alotmall.com/cdn/shop/products/Large-Canvas-Pouched-Stationery-Organiser-Pencil-Case-45_600x600.jpg?v=1689048750" alt="School Supplies Image" width="150" height="150">
-    <img src="https://penstore.com/bilder/artiklar/zoom/102078_1.jpg?m=1598347735" alt="School Supplies Image" width="150" height="150">
-    <!-- Add content for the "School supplies" section here -->
-  </section>
-</div>
-
-
- 
-
-  <!-- Footer with a 40px margin-top -->
-<footer class="footer" style="margin-top: 40px;">
-  <h2>Get to know us</h2>
-  <h2>Let us help you</h2>
-</footer>
-
-  <!-- Full code here -->
-
-  <script>
-    function toggleLocationDropdown() {
-      const locationDropdown = document.getElementById("locationDropdown");
-      locationDropdown.classList.toggle("show");
-    }
-  </script>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 1996-2023, Amazon.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
