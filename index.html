@@ -1,509 +1,253 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    /* CSS for main header */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333; /* Adjust the background color as needed */
+      color: #fff; /* Adjust the text color as needed */
+    }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styless.css">
+    .main-header .header-logo a {
+      color: #fff; /* Adjust the logo text color as needed */
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/amazon-favicon.png">
+    .main-header .location-bar {
+      display: flex;
+      align-items: center;
+    }
 
-    <title>Amazon</title>
+    .main-header .location-toggle {
+      color: #fff; /* Adjust the text color as needed */
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .main-header .location-dropdown {
+      display: none;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    .main-header .location-dropdown.show {
+      display: block;
+    }
+
+    .main-header nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .main-header nav li {
+      margin-right: 20px;
+    }
+
+    /* CSS for subheader */
+    .sub-header {
+      text-align: center; /* Center-align subheader links */
+      background-color: #333; /* Adjust the background color as needed */
+      color: #fff; /* Adjust the text color to white */
+      padding: 10px 20px;
+    }
+
+    .sub-header ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center; /* Center-align subheader links */
+    }
+
+    .sub-header li {
+      margin-right: 20px;
+    }
+
+    .sub-header a {
+      color: #fff; /* Set the color of subheader links to white */
+      text-decoration: none;
+    }
+
+    /* Shared CSS for header tools */
+    .header-tools {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .header-tools .header-search {
+      flex: 1; /* Take up remaining space */
+      text-align: center; /* Center align the search bar */
+    }
+
+    .header-tools .header-search form {
+      display: flex; /* Center align the form content */
+      justify-content: center; /* Center align the form content */
+    }
+
+    .header-tools .header-search input[type="text"] {
+      width: 100%; /* Make the input fill the available space */
+    }
+
+    .header-tools .header-search button {
+      margin-left: 10px;
+    }
+
+    .header-tools .sign-in a,
+    .header-tools .cart a {
+      color: #fff; /* Adjust the text color as needed */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .header-tools .cart a {
+      margin-left: 40px; /* Add a 40px gap between Cart and Sign In */
+    }
+
+    .header-tools .sign-in a {
+      margin-left: 40px; /* Add a 40px gap between Search and Sign In */
+    }
+
+    /* CSS for the footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer h2 {
+      font-size: 24px;
+    }
+      
+    .product-category {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f5f5f5; /* Adjust the background color as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-category h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Additional styling for each section can be added here */
+
+  </style>
 </head>
-
 <body>
-    <div id="top-bar" class="d-flex bd-highlight justify-content-between p-1" style="background-color: #FF9900">
-        <div class="p-2 my-auto" id="logo">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/amazon.png" width="30" height="30" alt="" loading="lazy">
-            </a>
-        </div>
-        <div class="p-2 my-auto" id="category-dropdown">
-            <div class="nav-item dropdown dropdown-cat has-megamenu">
-                <div class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Category</div>
-                <div class="dropdown-menu megamenu" style="background-color: #FF9900; border: 1px solid transparent">
-                    <div class="container" style="background-color: #FF9900">
-                        <div id="cat-row-1" class="row">
-                            <div id="grocery" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/grocery.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Grocery
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="health-household" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/health-household.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Health & Household
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="electronics" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/electronics.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Electronics
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="books" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/books.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Books
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="cat-row-2" class="row pt-1">
-                            <div id="home" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/home.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Home
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="kitchen-dining" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/kitching-dining.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Kitchen & Dining
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="toys-games" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/toys-games.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Toys & Games
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="baby" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/baby.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Baby
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="cat-row-3" class="row pt-1">
-                            <div id="beauty" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/beauty.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Beauty
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="office" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/office-supplies.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Office Supplies
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="video-games" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/video-games.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            Video Games
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="diy-tools" class="col-sm p-5">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm text-center">
-                                            <img class="img-category" src="img/category/diy-tools.jpeg">
-                                        </div>
-                                    </div>
-                                    <div class="row pt-2">
-                                        <div class="col-sm text-center">
-                                            DIY Tools
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p-2 my-auto w-100 d-inline-block" id="search">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text" id="btnGroupAddon2"><img src="img/search-24px.svg"></div>
-                </div>
-                <input type="search" class="form-control border border-right-0" id="navbar-search" placeholder="Search">
-            </div>
-        </div>
-        <div class="p-2 my-auto" id="login">Hello guest! Sign in.</div>
-        <div class="p-2 my-auto" id="cart"><img src="img/shopping_cart-24px.svg" height="30"></div>
-    </div>
-
-    <div id="second-bar" class="d-flex bd-highlight justify-content-between p-1" style="color: #ffffff; background-color: #222939;">
-        <div id="delivery-peek" class="p-2 pr-5 my-auto" style="color: #FF9900">
-            <img src="img/location_on-24px.svg" width="24" height="24"> Delivering to Singapore 119244
-        </div>
-        <div id="books" class="p-2 my-auto">
-            Books
-        </div>
-        <div id="prime" class="p-2 my-auto">
-            Prime
-        </div>
-        <div id="todays-deals" class="p-2 my-auto">
-            Today's Deals
-        </div>
-        <div id="customer-service" class="p-2 my-auto">
-            Customer Service
-        </div>
-        <div id="electronics" class="p-2 my-auto">
-            Electronics
-        </div>
-        <div id="subscribe-prime" class="p-2 pl-5 my-auto">
-            Stream movies and TV shows with <img src="img/prime_video.png" height="24">
-        </div>
-    </div>
-
-    <div id="carouselExampleIndicators" class="carousel slide pb-1" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/banner/banner1.jpg" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="img/banner/banner2.jpg" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-                <img src="img/banner/banner3.png" class="d-block w-100">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="location-toggle" onclick="toggleLocationDropdown()">Choose Location for Accurate Options</div>
+    <div class="header-logo">
+      <a href="/">Titans</a>
     </div>
     
-    <div class="container pt-5 pb-4">
-        <div class="row" id="tabs">
-            <div class="col-sm text-right">
-                <a class="tab-option tab-active">Flash Sale</a>
-            </div>
-            <div class="col-sm text-center">
-                <a class="tab-option">Recommended</a>
-            </div>
-            <div class="col-sm text-left">
-                <a class="tab-option">Best Sellers</a>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-4">
-        <div class="row mt-4" id="row-1">
-            <div class="col-sm m-4">
-                <a href="tshirt.html" class="text-decoration-none" style="color: black;">
-                    <div class="container">
-                        <div class="row">
-                            <img class="img-fluid" src="img/products/grey-shirt.png">
-                        </div>
-                        <div class="row mt-3">
-                            Cotton T-Shirt
-                        </div>
-                        <div class="row font-weight-bold mt-1">
-                            <h5><b>$15.99</b></h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Playstation.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Sony PlayStation
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$299</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Handbag.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Red Handbag
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$999</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Blender.jpeg">
-                    </div>
-                    <div class="row mt-3">
-                        Blender
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$39.90</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Lamp.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Lamp
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$19.90</b></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4" id="row-2">
-            <div class="col-sm m-4">
-                <a href="tshirt.html" class="text-decoration-none" style="color: black;">
-                    <div class="container">
-                        <div class="row">
-                            <img class="img-fluid" src="img/products/grey-shirt.png">
-                        </div>
-                        <div class="row mt-3">
-                            Cotton T-Shirt
-                        </div>
-                        <div class="row font-weight-bold mt-1">
-                            <h5><b>$15.99</b></h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Playstation.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Sony PlayStation
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$299</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Handbag.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Red Handbag
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$999</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Blender.jpeg">
-                    </div>
-                    <div class="row mt-3">
-                        Blender
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$39.90</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Lamp.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Lamp
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$19.90</b></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4" id="row-3">
-            <div class="col-sm m-4">
-                <a href="tshirt.html" class="text-decoration-none" style="color: black;">
-                    <div class="container">
-                        <div class="row">
-                            <img class="img-fluid" src="img/products/grey-shirt.png">
-                        </div>
-                        <div class="row mt-3">
-                            Cotton T-Shirt
-                        </div>
-                        <div class="row font-weight-bold mt-1">
-                            <h5><b>$15.99</b></h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Playstation.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Sony PlayStation
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$299</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Handbag.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Red Handbag
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$999</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Blender.jpeg">
-                    </div>
-                    <div class="row mt-3">
-                        Blender
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$39.90</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm m-4">
-                <div class="container">
-                    <div class="row">
-                        <img class="img-fluid" src="img/products/Lamp.jpg">
-                    </div>
-                    <div class="row mt-3">
-                        Lamp
-                    </div>
-                    <div class="row font-weight-bold mt-1">
-                        <h5><b>$19.90</b></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="location-bar">
+      <div class="location-dropdown" id="locationDropdown">
+        <select>
+          <option value="location1">Location 1</option>
+          <option value="location2">Location 2</option>
+          <option value="location3">Location 3</option>
+        </select>
+      </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+    <div class="header-tools">
+      <div class="header-search">
+        <form>
+          <input type="text" placeholder="Search...">
+          <button type="submit">Go</button>
+        </form>
+      </div>
+
+      <div class="sign-in">
+        <a href="/signin">Sign In</a>
+      </div>
+
+      <div class="cart">
+        <a href="/cart">Cart</a>
+      </div>
+    </div>
+  </header>
+
+ 
+
+  <!-- Subheader -->
+  <header class="sub-header">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/clothes">Clothes</a></li>
+      <li><a href="/navigation">Navigation</a></li>
+      <li><a href="/navigation" onclick="loadGamesPage()">Games</a></li>
+
+    </ul>
+  </header>
+
+  <!-- Your webpage content goes here -->
+
+   <!-- Your webpage content goes here -->
+<div class="content">
+  <section class="product-category">
+    <h2>Trending</h2>
+    <!-- Add content for the "Trending" section here -->
+  </section>
+
+  <section class="product-category">
+    <h2>Top deals</h2>
+    <!-- Add content for the "Top deals" section here -->
+  </section>
+
+  <section class="product-category">
+    <h2>Best sellers</h2>
+    <!-- Add content for the "Best sellers" section here -->
+  </section>
+
+  <section class="product-category">
+    <h2>Last-minute deal</h2>
+    <!-- Add content for the "Last-minute deal" section here -->
+  </section>
+
+  <section class="product-category">
+    <h2>School supplies</h2>
+    <img src="https://www.alotmall.com/cdn/shop/products/Large-Canvas-Pouched-Stationery-Organiser-Pencil-Case-45_600x600.jpg?v=1689048750" alt="School Supplies Image" width="150" height="150">
+    <img src="https://penstore.com/bilder/artiklar/zoom/102078_1.jpg?m=1598347735" alt="School Supplies Image" width="150" height="150">
+    <!-- Add content for the "School supplies" section here -->
+  </section>
+</div>
+
+
+ 
+
+  <!-- Footer with a 40px margin-top -->
+<footer class="footer" style="margin-top: 40px;">
+  <h2>Get to know us</h2>
+  <h2>Let us help you</h2>
+</footer>
+
+  <!-- Full code here -->
+
+  <script>
+    function toggleLocationDropdown() {
+      const locationDropdown = document.getElementById("locationDropdown");
+      locationDropdown.classList.toggle("show");
+    }
+  </script>
 </body>
-
 </html>
